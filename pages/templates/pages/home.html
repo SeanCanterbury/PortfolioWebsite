@@ -1,72 +1,24 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<html lang="en">
+{% load static %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Adam Slade" />
-  <!--Link to search bar icon from google fonts-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <title>Main Page</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-  <!--Header class, includes logo + login/logout-->
-  <div class="header">
-    <!--Stuff in header here (logo + login/logout)-->
-    <div class="logo">
-      <a href="">Rate My Internship</a>
-    </div>
-    <button type="button" class="button">Login</button>
-    <button type="button" class="button">Sign-Up</button>
-  </div>
-
-  <!--First ad space, top white boarder on example pic-->
-  <div id="ads1">
-    ad space 1
-    <!--Include ad stuff here-->
-  </div>
-
-  <!--Search box space-->
-  <div id="search">
-    <!--Include search bar plus text above/below-->
-    <h1>Enter your company to get started</h2>
-
-      <div id="search-bar">
-        <!--search bar icon-->
-        <span class="material-symbols-outlined">search</span>
-        <!--actual search bar-->
-        <input type="search" placeholder="Your Company" name="search-bar">
-      </div>
-
-      <p>I'd like to look up an internship by name</p>
-  </div>
-
-  <!--2nd white space, includes all text plus the button to join RMI-->
-  <div id="join">
-    <!--Include text and button to signup-->
-    <h2>Like RMI? Consider coming aboard!</h2>
-
-    <h3>Perks</h3>
-    <button type="join" id="join-button">Join Now</button>
-  </div>
-
-  <!--Footer class-->
-  <div class="footer">
-    <!--Has footer text and nav elements-->
-    <h4>Rate My Internship</h4>
-    <p>All Rights Reserved</p>
-
-    <nav>
-      <a href="">Terms of Service</a> |
-      <a href="">Privacy Policy</a> |
-      <a href="">Company info</a> |
-      <a href="">Contact</a>
-    </nav>
-  </div>
+<body >
+  <main>
+    
+    <section>
+      <p>Short description about yourself goes here.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2022 Your Name</p>
+  </footer>
 </body>
-
-</html>{% endblock page_content %}
+</html>
+{% endblock page_content %}

@@ -1,64 +1,12 @@
 {% extends "base.html" %}
 
+
 {% block page_content %}
-<head>
-    <style>
-                body {
-            font-family: "SF", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
 
-        h1 {
-            color: #333;
-            font-weight: bold;
-            padding-top: 20px;
-        }
-
-        h5 {
-            color: #666;
-        }
-
-        .row {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px;
-        }
-
-        .col-md-8, .col-md-4 {
-            padding: 20px;
-        }
-
-        .col-md-8 img {
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-
-        .col-md-4 p {
-            color: #777;
-            line-height: 1.6;
-        }
-
-        .col-md-4 a {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 10px;
-        }
-
-        .col-md-4 a:hover {
-            background-color: #666;
-        }
-    </style>
-</head>
-
-<div style="background-color: #e5dfdf; padding: 20px;">
-    <h1 style="text-align: center;">{{ project.title }}</h1>
+<div">
+    <h1 style="text-align: center; font-size: 4em; margin: 40;">{{ project.title }}</h1>
 </div>
-<div style = "padding: 4px; background-color: #666;"></div>
+
 <div class="row">
     <div class="col-md-8">
         {% if project.image %}
@@ -76,18 +24,6 @@
         <p><a href="{{ project.link }}" target="_blank">GitHub</a></p>
         
     </div>
-</div>
 
-    <a href="javascript:history.back()" 
-    style="
-    position: absolute;
-    top: 10px;
-    left: 10px; 
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px;">
-    Projects</a>
+    </div>
 {% endblock page_content %}
