@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<head>
+    <style>
+                body {
+            font-family: "futura", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            padding-top: 20px;
+        }
+
+        h5 {
+            color: #666;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        .col-md-8, .col-md-4 {
+            padding: 20px;
+        }
+
+        .col-md-8 img {
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        .col-md-4 p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .col-md-4 a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        .col-md-4 a:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<div>
+    <h1 style="text-align: center; font-size: 4em; margin: 40;">Projects</h1>
+</div>
+<div class="row">
+{% for project in projects %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            {% if project.image %}
+                <img class="card-img-top" src="{{ project.image.url }}">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.shortDescription }}</p>
+                <a href="{% url 'project_detail' project.pk %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
