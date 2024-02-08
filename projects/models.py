@@ -12,3 +12,9 @@ class Project( models.Model):
 
     def __str__(self):
         return self.title 
+
+class Resume (models.Model):
+    file = models.FileField(upload_to='resume/',blank=True)
+
+    def __str__(self):
+        return self.file.name

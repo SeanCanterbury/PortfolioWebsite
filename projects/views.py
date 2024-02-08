@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from projects.models import Project
+from projects.models import Project, Resume
 
 # Create your views here.
 def project_index(request):
@@ -15,3 +15,10 @@ def project_detail(request, pk):
         "project": project
     }
     return render(request, "projects/project_detail.html", context)
+
+def resume(request):
+    resume = Resume.objects.all()
+    context = {
+        'resume': resume
+    }
+    return render(request, 'projects/resume.html', context)

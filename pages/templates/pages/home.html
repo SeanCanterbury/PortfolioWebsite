@@ -8,17 +8,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-</head>
-<body >
-  <main>
+  <body>
+    <header>
+      <h1 style = "padding-top: 2.5%; font-size: 50px;">Welcome to My Portfolio</h1>
+    </header>
+  
+    <main>
+      <div class="row" style="display: flex; align-items: center; padding-top: 2.5%;">
+        <div class="col-md-7">
+          <div style="display: flex; justify-content: center;">
+            <img src="{% static '/pillars.png' %}" width="75%">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <h2>About Me</h2>
+          <p>My name is Sean Canterbury, I'm a senior at UNC Charlotte set to graduate in May 2024. 
+          I'm pursuing my BS in Computer Science with a concentration in Software Systems and networks
+          along with a minor in Mathematics. I have always been passionate about technology and I'm excited to
+          start my career in the field. I have experience with Java, Python, C, C++, C#, SQL, HTML, and CSS from
+          my coursework and personal projects. I have also worked with Git, Linux, Windows, and macOS. I hope you will take
+          some time out of your day to look at my projects and resume linked above. Thank you for visiting my site!
+          </p>
+          <h2>Contact Me</h2>
+          <p>You can reach me at: (919) 670-7407 or swcantebury7@gmail.com</p>
+          <p>Visit my Linkedin or Github below</p>
+        </div>
+      </div>
+    </main>
+      </div>
+      
+
     
-    <section>
-      <p>Short description about yourself goes here.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2022 Your Name</p>
-  </footer>
-</body>
+  </body>
 </html>
 {% endblock page_content %}

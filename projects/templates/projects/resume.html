@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block page_content %}
+<div>
+    <h1 style="text-align: center; font-size: 4em; margin: 40;">Resume</h1>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <embed src="{% static '/Resume_CS_Feb_5_2023.pdf' %}" width="1000px" height="1200px" type="application/pdf">
+    </div>
+</div>
+{% endblock %}
